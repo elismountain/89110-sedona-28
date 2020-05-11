@@ -1,14 +1,14 @@
 # Личный проект «Седона»
 
 * Студент: [OLGA AVRAMENKO](https://up.htmlacademy.ru/htmlcss/28/user/89110).
-* Наставник: `студент без наставника, к сожалению`.
+* Наставник: `студент без наставника`.
 
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
 _`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`._
 
----
+-
 
 ### Памятка
 
