@@ -20,36 +20,44 @@
     </nav>
     </header>
     <main>
-  <form action="#" method="get">
-    <fieldset>
-    <legend> Инфраструктура </legend>
-    <label><input type="checkbox" name="infrastructure" checked value="Бассейн"> Бассейн </label>
-    <label><input type="checkbox" name="infrastructure"> Парковка </label>
-    <label><input type="checkbox" name="infrastructure"> Wi-Fi </label>
-    </fieldset>
+      <section class="filter">
+        <form action="#" method="get">
+          <fieldset>
+            <legend> Инфраструктура </legend>
+            <label><input type="checkbox" name="infrastructure" checked value="Бассейн"> Бассейн </label>
+            <label><input type="checkbox" name="infrastructure"> Парковка </label>
+            <label><input type="checkbox" name="infrastructure"> Wi-Fi </label>
+          </fieldset>
 
-    <fieldset>
-    <legend>Тип жилья </legend>
-    <label><input type="checkbox" name="type" checked value="Гостиница"> Гостиница </label>
-    <label><input type="checkbox" name="type" checked value="Мотель"> Мотель </label>
-    <label><input type="checkbox" name="type" checked value="Апартаменты"> Апартаменты </label>
-    </fieldset>
+          <fieldset>
+            <legend>Тип жилья </legend>
+            <label><input type="checkbox" name="type" checked value="Гостиница"> Гостиница </label>
+            <label><input type="checkbox" name="type" checked value="Мотель"> Мотель </label>
+            <label><input type="checkbox" name="type" checked value="Апартаменты"> Апартаменты </label>
+          </fieldset>
 
-    <fieldset>
-    <legend> Стоимость в сутки, <span> ₽ </span> </legend>
-    <label>от<input type="text" value="0"></label>
-    <label>до<input type="text" value="3000"></label>
+          <fieldset>
+            <legend> Стоимость в сутки, <span> ₽ </span> </legend>
+            <label>от<input type="text" value="0"></label>
+            <label>до<input type="text" value="3000"></label>
+          </fieldset>
 
-    </fieldset>
-    <button type="submit">Показать</button>
-  </form>
+          <button type="submit">Показать</button>
+        </form>
 
-
-  <!-- добавить результаты поиска-->
+        <section>
+          <h2>Найдено: 3</h2>
+          <p>Сортировка:</p>
+          <ul>
+            <li><a href="#">По цене</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По рейтингу</a></li>
+          </ul>
+          <button class="ascending"></button>
+          <button class="descending active"></button>
+      </section>
 
   </main>
-
-
 
   <footer>
     <section>
