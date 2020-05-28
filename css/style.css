@@ -8,7 +8,7 @@ html {
           box-sizing: inherit;
 }
 
-::root {
+:root {
   --basic-black: #333333;
   --basic-white: #ffffff;
   --light-blue: #81B3D2;
@@ -27,7 +27,7 @@ body {
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-grey);
-
+  background-image: url("../img/background.jpg");
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -41,12 +41,25 @@ img{
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin:-1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .main-navigation {
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
+
+.main-navigation {}
 
 .main-navigation-wrapper{
 }
@@ -64,15 +77,4 @@ img{
 }
 .site-navigation a:active {
   color: var(--basic-brown);
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin:-1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
