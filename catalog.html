@@ -10,16 +10,20 @@
 </head>
 <body>
   <header>
-    <nav>
+    <nav class="main-navigation">
       <a class="main-header-logo">
         <img src="img\logo-sedona.svg" width="138" height="70" alt="Логотип сайта городка Седона">
       </a>
-      <ul>
-        <li> <a href="index.html"> Информация</a> </li>
-        <li> <a href="blank.html"> Фото и видео </a> </li>
-        <li> <a href="blank.html"> Карта штата </a> </li>
-        <li> <a href="blank.html">Гостиницы </a></li>
-      </ul>
+      <div class="main-navigation-wrapper">
+        <div class="container">
+          <ul class="site-navigation">
+            <li> <a href="blank.html"  > Информация</a> </li>
+            <li> <a href="blank.html"> Фото и видео </a> </li>
+            <li> <a href="blank.html"> Карта штата </a> </li>
+            <li> <a href="catalog.html"> Гостиницы </a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -132,37 +136,33 @@
 
           </main>
 
-          <footer>
-            <section>
+          <footer class="page-footer main-footer">
+            <div class="container">
+            <section class="footer-contacts">
               <h2>Контакты</h2>
               <a href="instagram.html">#visitSEDONA</a>
               <p> ТЕЛ: +7(495) 666-01-66 </p>
             </section>
 
-            <section>
+            <section class="footer-social-media">
               <h2 class="visually-hidden"> Социальные медиа </h2>
               <ul>
                <li>
-                 <a href="#"> Twitter </a>
+                 <a class="button button-twitter" href="#"> Twitter </a>
                </li>
 
                 <li>
-                  <a href="#"> Facebook </a>
+                  <a class="button button-fb" href="#"> Facebook </a>
                  </li>
 
                 <li>
-                  <a href="#"> Youtube </a>
+                  <a class=" button button-youtube" href="#"> Youtube </a>
                 </li>
                   </ul>
             </section>
-
             <p> Разработано
-              <a href="https://htmlacademy.ru/intensive/htmlcss">
-                 HTML Academy
-              </a>
-
+              <a href="https://htmlacademy.ru/intensive/htmlcss"> HTML Academy </a>
             </p>
           </footer>
-
         </body>
         </html>
