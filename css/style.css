@@ -11,6 +11,7 @@ html {
 :root {
   --basic-black: #333333;
   --basic-white: #ffffff;
+
   --light-blue: #81B3D2;
   --basic-brown: #766357;
   --basic-grey: #f2f2f2;
@@ -18,9 +19,10 @@ html {
 }
 
 body {
+	width: 1200px;
   margin: 0;
   padding: 0;
-  min-width: 768px;
+  width: 768px;
   font-family: PT Sans, Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -42,11 +44,13 @@ img{
 }
 
 .page {
+	width: 1200px;
   height: 100%;
 }
 
 .page-body {
   min-height: 100%;
+	width: 1200px;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
@@ -74,12 +78,29 @@ img{
   background-color: var(--basic-white);
 }
 
-.main-header {
+.main-navigation li {
+  display: inline-block;
+  width: 240px;
+  vertical-align: middle;
+  text-align: center;
+
 }
+
+main-navigation li:nth-child(2) {
+  width: 240px;
+  margin-right: 240px;
+
+}
+
 
 .main-header-logo {
   width: 138px;
   height: 70px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
 }
 
 .container{
@@ -90,9 +111,10 @@ img{
 
 .main-navigation-wrapper{
   width: 100%;
-  background-color: var(--basic-white)
+  background-color: var(--basic-white);
   margin-bottom: 15px;
 }
+
 .main-navigation-wrapper .container {
   display: flex;
   justify-content: space-between;
@@ -113,8 +135,9 @@ img{
 }
 
 .site-navigation a:focus {
-  color: var(--basic-black); <!-- ПРОЗРАЧНОСТЬ???->
+  color: var(--basic-black);
 }
+
 .site-navigation a:active {
   color: var(--basic-brown);
 }
@@ -229,7 +252,6 @@ li {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  flex-wrap;
 }
 
 .reason-first-one {
@@ -278,7 +300,6 @@ li {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  flex-wrap;
   min-width: 256px;
 }
 
@@ -317,51 +338,89 @@ li {
   line-height: 24px;
 }
 
-.main-footer {
-  padding: 20px 0;
-  color: var(--basic-black);
-  background-color: var(--basic-white);
+.map {
+  width:1200px;
+  height: 594px;
+  background-attachment: scroll;
+
 }
 
-.main-footer .container {
+
+
+
+.main-footer {
+  width: 1200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  color: var(--basic-black);
+  position: relative;
 }
 
-.footer-contacts {
+.main-footer .columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; }
+
+
+  .contacts {
   font-family: PT-Sans;
+  bottom: 0;
+  width: 400px;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+  text-align: center;
 }
 
+.visit-sedona-phone {
 
-.footer-contacts a:hover,
-.footer-contacts a:focus {
+}
+
+.contacts a:hover,
+.contacts a:focus {
   text-decoration: none;
 }
 
+
+
 .footer-social-media {
+  display: inline-block;
+
   width: 400px;
   text-align: center;
   justify-self: center;
 }
 
 
-.footer-social-media ul {
-  display: flex;
-  width:400px;
-  flex-direction: row;
-  align-items: stretch;
-  column-gap: 6px;
+.social-button {
+  width: 46px;
+  height: 48px;
+  background-color: #7eadd4;
 }
 
-.social-bottom {
-  color:inherit;
+
+.social-button-twitter
+
+.social-botton-fb
+
+social-botton-yb
+
+
+.footer-copyright {
+  width: 33%;
 }
 
-.footer-copywrite {
-  width:400px;
-  justify-self: end;
+
+.footer-copyright b {
+  margin-right: 8px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.main-footer-logo:hover path,
+.main-footer-logo:focus path {
+  fill: #81b3d2;
+}
+.main-footer-logo:active path {
+  fill-opacity: 0.3;
 }
