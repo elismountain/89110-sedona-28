@@ -1,11 +1,11 @@
-var searchButton = document.querySelector(".search-hotel__button");
+var searchButton = document.querySelector(".search-hotel-button");
 var form = document.querySelector(".interactive-form");
 var buttonClose = form.querySelector(".button-close");
 var arrivalDate = form.querySelector(".arrival-date");
 var departureDate = form.querySelector (".departure-date");
 var numberOfAdults = form.querySelector(".adults");
 var numberOfChildren = form.querySelector(".children");
-var sendingForm = form.querySelector(".search-hotel__form");
+var sendingForm = form.querySelector(".search-hotel-form");
 
 
 var isStorageSupport = true;
@@ -30,7 +30,6 @@ searchButton.addEventListener("click", function (evt) {
 	form.classList.toggle("form-hide");
 	form.classList.toggle(".interactive-form");
   input.focus();
-
 });
 
 sendingForm.addEventListener ("submit", function (evt) {
