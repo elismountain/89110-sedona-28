@@ -33,7 +33,6 @@ searchButton.addEventListener("click", function (evt) {
 });
 
 sendingForm.addEventListener ("submit", function (evt) {
-	evt.preventDefault();
     if (!numberOfAdults.value || !numberOfChildren.value){
         evt.preventDefault();
         form.classList.add("form-error");

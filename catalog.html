@@ -6,29 +6,27 @@
         <title>Поиск отелей</title>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link  rel="stylesheet" href="css/style.css">
     </head>
     <body class="page-body">
-        <div class="container">
+        <div class="content">
             <header class="page-header">
                 <nav class="main-navigation">
                     <a class="main-header-logo" href="index.html">
                         <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип сайта городка Седона">
                     </a>
-                    <div class="main-navigation-wrapper">
                         <div class="container">
                             <ul class="site-navigation">
                                 <li><a href="blank.html"> Информация</a></li>
                                 <li><a href="blank.html"> Фото и видео </a></li>
                                 <li><a href="blank.html"> Карта штата </a></li>
-                                <li><a class="site-navigation-current" href="#"> Гостиницы </a></li>
+                                <li class="site-navigation-current"><a href="#"> Гостиницы </a></li>
                             </ul>
-                        </div>
                     </div>
                 </nav>
             </header>
 
-            <main>
+            <main class="main-page">
                 <h1 class="visually-hidden">Поиск отелей в Седоне</h1>
                 <form class="clearfix form-filters" action="https://echo.htmlacademy.ru" method="get">
                     <div class="form-filters-wrapper-left">
@@ -37,16 +35,16 @@
                             <ul class="form-filters-input-wrapper">
                                 <li class="form-filters-input-block">
                                     <input class="form-filters-checkbox visually-hidden" type="checkbox" name="pool" id="filter-pool" checked>
-                                    <label class="form-filters-label-checkbox" for="filter-pool"> Бассейн </label>
+                                    <label class="form-filters-label-checkbox" for="filter-pool"area-label="Бассейн"> Бассейн </label>
                                 </li>
 
                                 <li class="form-filters-input-block">
                                     <input class="form-filters-checkbox visually-hidden" type="checkbox" name="parking" id="filter-parking">
-                                    <label class="form-filters-label-checkbox" for="filter-parking"> Парковка </label>
+                                    <label class="form-filters-label-checkbox" for="filter-parking" area-label="Парковка"> Парковка </label>
                                 </li>
                                 <li class="form-filters-input-block">
                                     <input class="form-filters-checkbox visually-hidden" type="checkbox" name="wifi" id="wifi">
-                                    <label class="form-filters-label-checkbox" for="wifi">Wi-Fi</label>
+                                    <label class="form-filters-label-checkbox" for="wifi" area-label="WI-FI">Wi-Fi</label>
                                 </li>
                             </ul>
                         </fieldset>
@@ -57,17 +55,17 @@
                             <ul class="form-filters-input-wrapper">
                                 <li class="form-filters-input-block">
                                     <input class="form-filters-checkbox visually-hidden" type="checkbox" name="hotel" id="hotel" checked>
-                                    <label class="form-filters-label-checkbox" for="hotel">Гостиница</label>
+                                    <label class="form-filters-label-checkbox" for="hotel" area-label="Гостиница">Гостиница</label>
                                 </li>
 
                                 <li class="form-filters-input-block">
                                     <input class="form-filters-checkbox visually-hidden" type="checkbox" name="motel" id="motel" checked>
-                                    <label class="form-filters-label-checkbox" for="motel">Мотель</label>
+                                    <label class="form-filters-label-checkbox" for="motel" area-label="Мотель">Мотель</label>
                                 </li>
 
                                 <li class="form-filters-input-block">
                                     <input class="form-filters-checkbox visually-hidden" type="checkbox" name="apartments" id="apartments" checked>
-                                    <label class="form-filters-label-checkbox" for="apartments">Апартаменты</label>
+                                    <label class="form-filters-label-checkbox" for="apartments" area-label="Апартаменты">Апартаменты</label>
                                 </li>
                             </ul>
                         </fieldset>
@@ -77,9 +75,9 @@
                         <p class="form-filters-legend">Стоимость в сутки (Р):</p>
 
                         <p class="form-filters-interval">
-                            <label class="form-filters-label"> От <input class="form-filters-input-text" type="text" name="min-price" value="0"> </label>
+                            <label class="form-filters-label zero"> От <input class="form-filters-input-text" type="text" name="min-price" value="0"> </label>
 
-                            <label class="form-filters-label"> До <input class="form-filters-input-text" type="text" name="max-price" value="3000"> </label>
+                            <label class="form-filters-label three-thousand"> До <input class="form-filters-input-text" type="text" name="max-price" value="3000"> </label>
                         </p>
 
                         <div class="form-filters-range">
@@ -180,7 +178,6 @@
 
                                 <div class="hotel-booking">
                                     <p class="hotel-text">От 3000 р.</p>
-
                                     <a href="#" class="hotel-button button button--brown">Забронировать</a>
                                 </div>
                             </div>

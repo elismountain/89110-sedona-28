@@ -5,17 +5,16 @@
         <title>HTML Academy: Седона</title>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet"  href="css/style.css">
     </head>
 
     <body class="page-body">
-        <div class="container">
+      <div class="content">
             <header class="main-header">
                 <nav class="main-navigation">
-                    <a class="main-header-logo" href="index.html">
+                    <a class="main-header-logo" href="#">
                         <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип сайта городка Седона">
                     </a>
-                    <div class="main-navigation-wrapper">
                         <div class="container">
                             <ul class="site-navigation">
                                 <li><a href="blank.html"> Информация</a></li>
@@ -24,11 +23,10 @@
                                 <li><a href="catalog.html"> Гостиницы </a></li>
                             </ul>
                         </div>
-                    </div>
                 </nav>
             </header>
 
-            <main>
+            <main class="main-page">
                 <div class="intro"></div>
                 <div class="info-city">
                     <h2>
@@ -53,7 +51,7 @@
                             </h3>
                         </div>
                         <div class="reason-img reason-img-first">
-                            <img class="reason-image" src="img/sedona-photo-1.jpg" width="800" height="256" alt="Фотография города Седона">
+                            <img class="reason-image" src="img/sedona-city.jpg" width="800" height="256" alt="Фотография города Седона">
                         </div>
                     </section>
                 </div>
@@ -96,11 +94,11 @@
                             <span class="reason-number"> &ndash; №2 &ndash; </span>
                             <h3 class="reason-text">
                                 Да, по нему можно пройти! Если конечно <br>
-                                вы осмелитесь
+                                вы осмелитесь                              
                             </h3>
                         </div>
                         <div class="reason-img reason-img-second">
-                            <img src="img/sedona-photo-2.jpg" width="800" height="256" alt="Фотография каньона Седона">
+                            <img src="img/sedona-canyon-pic.jpg" width="800" height="256" alt="Фотография каньона Седона">
                         </div>
                     </section>
                 </div>
@@ -116,6 +114,7 @@
                             <p class="advantages-text">
                                 Все достопримечательности <br>
                                 находятся очень близко
+
                             </p>
                         </li>
 
@@ -157,7 +156,7 @@
 
                 <section class="interactive-form modal-error">
                     <h2 class="visually-hidden">Интерактивная форма</h2>
-                    <form class="form-search form-search--opened search-hotel-form" action="https://echo.htmlacademy.ru" method="post">
+                    <form class="form-search form-search--opened search-hotel-form" action="https://echo.htmlacademy.ru" method="get">
                         <div class="form-search-input-block">
                             <label class="form-search-label" for="arrival">Дата заезда:</label>
                             <input class="form-search-input-text arrival-date line" type="text" name="arrival" id="arrival" placeholder="24 апреля 2017" required>
@@ -198,7 +197,7 @@
                                 <button class="form-search-button form-search-button--plus" type="button" aria-label="Увеличить"></button>
                             </div>
                         </div>
-                        <button class="button button--blue form-search-submit button-close" type="submit">Найти</button>
+                        <button class="button button--blue form-search-submit button-close" type="submit" area-label="Кнопка найти">Найти</button>
                     </form>
                 </section>
 
@@ -268,6 +267,6 @@
                 </section>
             </footer>
         </div>
-        <script src="search.min.js"></script>
+        <script src="search.js"></script>
     </body>
 </html>

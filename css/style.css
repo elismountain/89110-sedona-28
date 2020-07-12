@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 2 version,not dead,not ie <=11
-*/
-
 html {
     box-sizing: border-box;
 }
@@ -18,7 +11,6 @@ html {
 :root {
     --basic-black: #333333;
     --basic-white: #ffffff;
-    --light-blue: #81b3d2;
     --basic-brown: #766357;
     --basic-grey: #f2f2f2;
     --basic-blue: #81b3d2;
@@ -33,6 +25,10 @@ html {
     --light-grey: #eeeeee;
     --grey-92: #ebebeb;
     --grey-90: #e5e5e5;
+    --transparent: rgba(255, 255, 255, 0.3);
+    --transparent-white: rgba(254, 254, 254, 0.9);
+    --transparent-black: rgba(0, 0, 0, 0.3);
+    --form-box-shadow: rgba(0, 1, 1, 0.15);
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -91,28 +87,24 @@ img {
     display: block;
 }
 
-.main-navigation-wrapper {
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
     background-color: var(--basic-white);
 }
 
-.main-navigation-wrapper .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-ul {
-    margin: 0;
-
-}
-
 .site-navigation {
+  display: flex;
+  justify-content: space-between;
     padding-left: 6%;
     padding-right: 6%;
     font-size: 0;
     width: 1200px;
     min-height: 56px;
+    margin: 0 auto;
 }
 
 .site-navigation a {
@@ -121,14 +113,14 @@ ul {
     vertical-align: middle;
     font-size: 14px;
     width: 100%;
-    padding: 14px 0 16px;
     text-decoration: none;
     color: var(--basic-black);
     font-weight: 700;
+    margin-top: 17px;
 }
 
 .site-navigation a:hover {
-    color: var(--light-blue);
+    color: var(--basic-blue);
 }
 
 .site-navigation a:focus {
@@ -139,33 +131,34 @@ ul {
     color: var(--basic-brown);
 }
 
-.site-navigation li {
-    display: inline-block;
-    vertical-align: middle;
-    width: 20%;
-    font-size: 14px;
-    line-height: 26px;
-    text-align: center;
-    box-sizing: border-box;
+.site-navigation-current a:visited {
+  color: var(--basic-brown);
 }
 
-.site-navigation li:first-child {
-    text-align: left;
+.site-navigation li {
+  outline: var(--basic-black);
+}
+
+
+.site-navigation li:first-child,
+.site-navigation li:nth-child(2) {
+  text-align: left;
+}
+
+.site-navigation li:nth-child(3),
+.site-navigation li:last-child {
+  text-align: right;
 }
 
 .site-navigation li:nth-child(2) {
     margin-right: 20%;
-    padding-right: 77px;
+    padding-right: 71px;
 }
 
 .site-navigation li:nth-child(3) {
-    text-align: right;
-    padding-right: 15px;
+  padding-right: 12px;
 }
 
-.site-navigation li:last-child {
-    text-align: right;
-}
 
 .header-main li:nth-child(3) {
     padding-right: 32px;
@@ -196,30 +189,36 @@ ul {
     grid-template-rows: min-content 1fr min-content;
     align-content: flex-start;
     padding: 0;
+
 }
 
-.container {
+.content {
     width: 1200px;
     margin: 0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px var(--transparent-black);
 }
 
-main {
+
+.main-page {
     background-color: var(--basic-white);
     display: block;
 }
 
+
+
 .intro {
     min-height: 509px;
-    background: url(../img/crucked.png) 0 453px no-repeat, url(../img/welcome-sedona.png) 50% 49% no-repeat, url(../img/background.jpg) 50% 100% no-repeat;
+    background: url(../img/crucked-decoration.png) 0 453px no-repeat, url(../img/welcome-sedona.png) 50% 49% no-repeat, url(../img/sedona-canyon-main.jpg) 50% 100% no-repeat;
     background-color: var(--sky-blue);
     margin-bottom: 41px;
 }
 
 .info-city {
+  margin:0 auto;
     margin-bottom: 52px;
     text-align: center;
     color: var(--basic-black);
+    max-width: 500px;
 }
 
 .info-city h2 {
@@ -311,21 +310,20 @@ main {
 }
 
 .features-item-house {
-    background: url(../img/icon-1.png) center 60px no-repeat;
+    background: url(../img/icon-house.png) center 60px no-repeat;
 }
 
 .features-item-food {
-    background: url(../img/icon-3.png) center 60px no-repeat;
+    background: url(../img/icon-burger.png) center 60px no-repeat;
 }
 
 .features-item-souvenir {
-    background: url(../img/icon-2.png) center 56px no-repeat;
+    background: url(../img/icon-souvenir.png) center 56px no-repeat;
 }
 /* ЖИЛЬЕ ЕДА СУВЕНИРЫ */
 
 .advantages {
     min-height: 256px;
-    height: 256px;
     background-color: var(--light-grey);
 }
 
@@ -336,7 +334,13 @@ main {
     align-items: center;
     text-align: center;
     list-style: none;
+    margin: 0;
 }
+
+.advantages-item {
+  padding: 0px 10% 0px;
+}
+
 
 .advantages-item-title {
     font-family: "PT Sans", "Arial", sans-serif;
@@ -381,7 +385,8 @@ main {
     text-align: center;
     align-items: center;
     margin: auto;
-    height: 256px;
+    min-height: 256px;
+    width:400px;
     padding: 32px;
     background-color: var(--basic-blue);
     flex-grow: 1;
@@ -434,7 +439,7 @@ main {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    height: 256px;
+    min-height: 256px;
 }
 
 .reason-bridge {
@@ -444,6 +449,8 @@ main {
     color: var(--basic-white);
     text-align: center;
     flex-grow: 1;
+    width: 400px;
+    min-height: 256px;
 }
 
 /* SEARCH MODAL WINDOW */
@@ -536,10 +543,12 @@ main {
     background-color: var(--dark-brown);
 }
 
+
+
 .button--brown:focus {
     background-color: var(--chocolate-brown);
     outline-offset: -3px;
-    color: rgba(255, 255, 255, 0.3);
+    color: var(--transparent);
 }
 
 .form-search {
@@ -547,7 +556,7 @@ main {
     box-sizing: border-box;
     text-align: left;
     background-color: var(--basic-white);
-    box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+    box-shadow: 0 7px 15px 0 var(--form-box-shadow);
 }
 
 .interactive-form {
@@ -666,6 +675,8 @@ main {
     opacity: 1;
 }
 
+
+
 .form-search-input-block input::-moz-placeholder {
     font-family: "PT Sans", "Arial", sans-serif;
     color: var(--basic-black);
@@ -746,7 +757,7 @@ main {
 
 .form-search-input-text {
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 5px 10px;
     border: 0;
     width: 307px;
     height: 38px;
@@ -761,9 +772,9 @@ main {
     background-color: var(--grey-92);
 }
 
-.form-search-input-text:active {
+.form-search-input-text:focus {
     background-color: var(--basic-white);
-    outline-color: var(--grey-90);
+    outline: 2px solid var(--grey-90);
 }
 
 .form-search-calendar {
@@ -789,8 +800,12 @@ main {
     fill: var(--basic-black);
 }
 
+.form-search-calendar:focus .form-search-calendar-icon {
+    fill: var(--basic-black);
+}
+
 .form-search-calendar:active .form-search-calendar-icon {
-    fill: #81b3d2;
+    fill: var(--basic-blue);
 }
 
 .form-search-quantity {
@@ -851,7 +866,7 @@ main {
 }
 
 .form-search-input-number {
-    padding: 0;
+    padding: 5px;
     width: 38px;
     text-align: center;
 }
@@ -899,7 +914,7 @@ main {
     z-index: 20;
     width: 1200px;
     margin-top: -120px;
-    background-color: rgba(254, 254, 254, 0.9);
+    background-color: var(--transparent-white);
     position: relative;
 }
 
@@ -962,16 +977,16 @@ main {
 }
 
 .button-blue {
-    background-color: var(--light-blue);
+    background-color: var(--basic-blue);
 }
 
 .button-blue:hover {
     background-color: var(--dark-blue);
 }
 
-.button-blue:active {
-    background-color: var(--sky-blue);
-    color: rgba(255, 255, 255, 0.3);
+
+.button-blue:active path {
+ fill:var(--transparent);
 }
 
 .social-links {
@@ -997,7 +1012,7 @@ main {
 .page-footer-copyright-icon {
     width: 115px;
     height: 41px;
-    fill: #000;
+    fill: var(--basic-black);
     margin-top: 5px;
 }
 
@@ -1016,7 +1031,7 @@ main {
     padding: 27px 6% 6px;
     color: var(--basic-white);
     background-color: var(--steel-blue);
-    background-image: url(../img/background-blur.jpg);
+    background-image: url(../img/sedona-canyon-blur.jpg);
     background-position: 50% 16%;
     background-size: cover;
 }
@@ -1087,13 +1102,21 @@ main {
 .form-filters-label {
     display: block;
     width: 40%;
-    padding: 0 1% 0 6.5%;
     text-align: right;
+}
+
+.zero {
+  padding-right: 10px;
+}
+
+.three-thousand {
+  padding-left: 10px;
 }
 
 .form-filters-interval {
     position: relative;
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 10px;
     margin-bottom: 0;
@@ -1120,7 +1143,7 @@ main {
 
 .form-filters-range-scale {
     height: 2px;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: var(--transparent);
 }
 
 .form-filters-range-bar {
@@ -1251,18 +1274,18 @@ main {
 }
 
 .sort-type-link {
-    color: rgba(0, 0, 0, 0.3);
-    border-bottom: 1px dotted #81b3d2;
+    color: var(--transparent-black);
+    border-bottom: 1px dotted var(--basic-blue);
 }
 
 .sort-type-link--active {
     border-bottom: 0;
-    color: var(--light-blue);
+    color: var(--basic-blue);
 }
 
 .sort-type-link:hover {
-    color: var(--light-blue);
-    border-bottom: 1px dotted #81b3d2;
+    color: var(--basic-blue);
+    border-bottom: 1px dotted var(--basic-blue);
 }
 
 .sort-type-link:active {
@@ -1300,7 +1323,7 @@ a {
 }
 
 .sort-direction-link--active {
-    border-bottom-color: var(--light-blue);
+    border-bottom-color: var(--basic-blue);
 }
 
 .sort-direction-link--descending {
@@ -1351,7 +1374,8 @@ a {
 }
 
 .hotel-link:active {
-    color: var(--basic-brown);
+    color: var(--basic-black);
+    opacity: 30%;
 }
 
 .hotel-description {
@@ -1364,8 +1388,10 @@ a {
 }
 
 .hotel-text {
+  padding-right: 50px;
     margin-top: 0;
     margin-bottom: 14px;
+    text-align: center;
 }
 
 .hotel-button {
@@ -1383,9 +1409,13 @@ a {
     background-color: var(--dark-blue);
 }
 
-.button--blue:active {
+.button--blue:focus {
     background-color: var(--dark-blue);
-    color: rgba(255, 255, 255, 0.3);
+}
+
+.button--blue:active path {
+    background-color: var(--dark-blue);
+    color: var(--transparent);
     outline: none;
 }
 
@@ -1399,7 +1429,7 @@ a {
 
 .button--brown:active {
     background-color: var(--chocolate-brown);
-    color: rgba(255, 255, 255, 0.3);
+    color: var(--transparent);
 }
 
 .button {
