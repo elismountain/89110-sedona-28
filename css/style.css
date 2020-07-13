@@ -1047,7 +1047,7 @@ img {
     position: absolute;
     width: 23px;
     height: 23px;
-    background-image: url("../img/checkbox_off_inactive.svg");
+    background-image: url("../img/checkbox-off-inactive.svg");
     background-repeat: no-repeat;
     left: -1px;
     top: 1px;
@@ -1068,7 +1068,7 @@ img {
     position: absolute;
     width: 27px;
     height: 23px;
-    background-image: url("../img/checkbox_on_inactive.svg");
+    background-image: url("../img/checkbox-on-inactive.svg");
     background-repeat: no-repeat;
     left: -1px;
     top: 1px;
