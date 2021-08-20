@@ -6,7 +6,8 @@
   <title>Поиск отелей</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link  rel="stylesheet" href="css/style.min.css">
+  <link  rel="stylesheet" href="css/style.css">
+  <link  rel="stylesheet" href="css/nouislider.min.css">
 </head>
 
 <body class="page-body">
@@ -18,9 +19,9 @@
         </a>
         <div class="container">
           <ul class="site-navigation">
-            <li><a href="blank.html" tabindex="2"> Информация</a></li>
-            <li><a href="blank.html" tabindex="3"> Фото и видео </a></li>
-            <li><a href="blank.html" tabindex="4"> Карта штата </a></li>
+            <li><a href="404.html" tabindex="2"> Информация</a></li>
+            <li><a href="404.html" tabindex="3"> Фото и видео </a></li>
+            <li><a href="map.html" tabindex="4"> Карта штата </a></li>
             <li class="site-navigation-current"> Гостиницы </li>
           </ul>
         </div>
@@ -76,18 +77,19 @@
           <p class="form-filters-legend">Стоимость в сутки (Р):</p>
 
           <p class="form-filters-interval">
-            <label class="form-filters-label zero" tabindex="11"> От <input class="form-filters-input-text" type="text" name="min-price" value="0"> </label>
-
-            <label class="form-filters-label three-thousand" tabindex="12"> До <input class="form-filters-input-text" type="text" name="max-price" value="3000"> </label>
+            <label class="form-filters-label zero" tabindex="11"> От
+              <input class="form-filters-input-text filter__input" type="text" name="min-price" value="0">
+            </label>
+            <label class="form-filters-label three-thousand" tabindex="12"> До
+              <input class="form-filters-input-text filter__input" type="text" name="max-price" value="3000">
+            </label>
           </p>
 
-          <div class="form-filters-range">
+          <div class="form-filters-range" id="sliderPrice" data-min="0" data-max="3000" data-step="1">
             <div class="form-filters-range-scale">
               <div class="form-filters-range-bar"></div>
             </div>
-
             <button class="form-filters-range-handle form-filters-range-handle--min" type="button" aria-label="Минимально" ></button>
-
             <button class="form-filters-range-handle form-filters-range-handle--max" type="button" aria-label="Максимально"></button>
           </div>
           <button class="form-filters-button" type="submit">Показать</button>
@@ -222,7 +224,7 @@
         <div class="contacts">
           <h2 class="visually-hidden">Контакты</h2>
           <p class="footer-contacts">#visitsedona</p>
-          <p><a href="tel:+74956660166" class="tel">тел: +7(495)666-01-66 </a></p>
+          <p><a href="tel:+74956660166" class="tel">phone: +44 7483 228 346</a></p>
         </div>
       </section>
 
@@ -255,12 +257,12 @@
       </section>
 
       <section class="page-footer-column">
-        <h2 class="visually-hidden">Копирайт</h2>
+        <h2 class="visually-hidden">Copyright</h2>
         <b class="footer-copyright-text"> Website by </b>
-        <a class="main-footer-logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
-          <svg class="page-footer-copyright-icon" width="115" height="41" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.08 36.85">
+        <a class="main-footer-logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Olga Avramenko">
+          <svg class="page-footer-copyright-icon" id="Layer-1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.08 36.85">
             <title>logo-htmlacademy-small1</title>
-            <path d="M44.61,26.88a2,2,0,0,0,.55-0.1v1.33a3.25,3.25,0,0,1-1.18.21,1.67,1.67,0,0,1-1.67-1,4.84,4.84,0,0,1-3.14,1.08c-1.51,0-2.91-.83-2.91-2.55,0-2.13,2-2.79,3.71-2.79a11.08,11.08,0,0,1,2.17.25v-0.3c0-1-.76-1.77-2.19-1.77a7.42,7.42,0,0,0-3,.64v-1.7a10.21,10.21,0,0,1,3.19-.55c2.36,0,3.81,1.12,3.81,3.65v3a0.54,0.54,0,0,0,.49.59h0.17Zm-6.44-1.13A1.35,1.35,0,0,0,39.63,27h0.11a3.39,3.39,0,0,0,2.41-1V24.58a9.72,9.72,0,0,0-1.81-.21c-1,0-2.16.33-2.16,1.38h0Zm12.36-6.11a5,5,0,0,1,2.57.64V22a4.08,4.08,0,0,0-2.3-.7,2.75,2.75,0,1,0,0,5.49,5,5,0,0,0,2.43-.64v1.71a6.27,6.27,0,0,1-2.76.57A4.21,4.21,0,0,1,46,24.51q0-.21,0-0.41a4.32,4.32,0,0,1,4.18-4.46h0.38Zm12.17,7.24a2,2,0,0,0,.55-0.1v1.33a3.25,3.25,0,0,1-1.18.21,1.67,1.67,0,0,1-1.67-1,4.84,4.84,0,0,1-3.14,1.08c-1.51,0-2.91-.83-2.91-2.55,0-2.13,2-2.79,3.71-2.79a11.08,11.08,0,0,1,2.17.25v-0.3c0-1-.76-1.77-2.19-1.77a7.42,7.42,0,0,0-3,.64v-1.7a10.21,10.21,0,0,1,3.19-.55c2.36,0,3.81,1.12,3.81,3.65v3a0.54,0.54,0,0,0,.49.59h0.17Zm-6.44-1.13A1.35,1.35,0,0,0,57.73,27h0.11a3.39,3.39,0,0,0,2.41-1V24.58a9.72,9.72,0,0,0-1.81-.21c-1.06,0-2.16.33-2.16,1.38h0ZM73,16V28.2H71.35V26.88a3.88,3.88,0,0,1-3.19,1.54,4.4,4.4,0,0,1,0-8.78,3.81,3.81,0,0,1,3,1.3V16H73Zm-4.53,5.22a2.76,2.76,0,1,0,0,5.52A2.86,2.86,0,0,0,71.15,25V23A2.91,2.91,0,0,0,68.49,21.27ZM79,19.64c3.31,0,4.46,2.68,3.92,5.09H76.7c0.21,1.5,1.67,2.11,3.19,2.11a6.11,6.11,0,0,0,2.64-.59v1.6a7.14,7.14,0,0,1-3,.57C77,28.42,74.78,27,74.78,24a4.18,4.18,0,0,1,4-4.39H79Zm0.09,1.54a2.28,2.28,0,0,0-2.44,2.1v0.06H81.3A2,2,0,0,0,79.13,21.18Zm5.73,7V19.87h1.65v1a3.81,3.81,0,0,1,2.78-1.27A2.86,2.86,0,0,1,91.89,21a4.12,4.12,0,0,1,2.91-1.33A3.06,3.06,0,0,1,98,23V28.2h-1.9V23.05a1.59,1.59,0,0,0-1.42-1.75H94.42a2.8,2.8,0,0,0-2.07,1.12V28.2h-1.9V23.05A1.59,1.59,0,0,0,89,21.31H88.8a3,3,0,0,0-2.21,1.29v5.63H84.86Zm21.31-8.33h1.9l-3.91,9.46c-0.9,2.17-2.09,2.86-3.35,2.86a4.76,4.76,0,0,1-1.1-.14V30.46a2.86,2.86,0,0,0,.85.12c0.9,0,1.58-.64,2.07-1.9l0.17-.42-4-8.4h2l2.86,6.29ZM38.73,1.46V6.22a3.81,3.81,0,0,1,2.7-1.14,3.25,3.25,0,0,1,3.44,3.4v5.15H43V8.72a1.81,1.81,0,0,0-1.61-2h-0.3a2.93,2.93,0,0,0-2.32,1.39v5.52h-1.9V1.46h1.9ZM49.94,2.31v3h3V6.91h-3v3.81c0,1.1.5,1.46,1.58,1.46a4.49,4.49,0,0,0,1.69-.33v1.6A6.8,6.8,0,0,1,51,13.8a2.55,2.55,0,0,1-2.86-2.74V6.89H46.58V5.26h1.5V2.74Zm5.4,11.31V5.28H57v1A3.81,3.81,0,0,1,59.77,5a2.86,2.86,0,0,1,2.6,1.33A4.12,4.12,0,0,1,65.28,5,3.06,3.06,0,0,1,68.44,8.4v5.21h-1.9V8.46a1.59,1.59,0,0,0-1.42-1.75H64.89a2.8,2.8,0,0,0-2.07,1.12v5.78h-1.9V8.46A1.59,1.59,0,0,0,59.5,6.71H59.27A3,3,0,0,0,57.06,8v5.63H55.34ZM71.17,1.45H73V13.6H71.17V1.45ZM14.71,0H14.55L0,1.54V28.21l14.55,8.66,14.55-8.66V1.54Zm12.5,27.1L14.55,34.64,1.9,27.12V16.18l12.59,7.5V25L5.86,19.9v1.31l8.68,5.21v1.39L5.87,22.65V24l8.68,5.21,8.75-5.24V18.31L27.2,16V27.12Zm0-12.53-3.48,2-1.6,1L14.51,13v1.31L21,18.23H21l-0.14.09-1,.54-5.37-3.2V17l4.24,2.52-1,.67-3.2-1.9v1.31l2.1,1.24L14.5,22.1,2,14.65,14.51,7.11Zm0-1.32L14.49,5.76,1.91,13.25v-10L14.56,1.92,27.21,3.25v10h0Z"
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
             transform="translate(0 -0.02)"
             fill="#231f20"/>
           </svg>
@@ -268,5 +270,7 @@
       </section>
     </footer>
   </div>
+  <script src="js/nouislider.min.js"></script>
+  <script src="js/catalog.js"></script>
 </body>
 </html>
